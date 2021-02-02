@@ -1,0 +1,119 @@
+{
+    "layers": [
+        {
+            "title": "Mental  Health and Substance Use Support",
+            "dataUrl": "https://openmaps.gov.bc.ca/geo/pub/WHSE_IMAGERY_AND_BASE_MAPS.GSR_MENTAL_HLTH_SUBSTCE_USE_SV/ows?service=WMS&version=1.1.0&request=GetMap&layers=pub%3AWHSE_IMAGERY_AND_BASE_MAPS.GSR_MENTAL_HLTH_SUBSTCE_USE_SV&styles=7785&format=application/json;type=geojson&transparent=true&cql_filter=include&srs=EPSG:4326&width=768&height=660&bbox=-139.1782824917356,47.60393449638617,-110.35337939457779,60.593907018763396",
+            "id": "mental-health-and-substance-use-support",
+            "attributes": [
+                {
+                    "id": "contact-email",
+                    "name": "CONTACT_EMAIL",
+                    "title": "CONTACT_EMAIL",
+                    "visible": true
+                },
+                {
+                    "id": "contact-phone",
+                    "name": "CONTACT_PHONE",
+                    "title": "CONTACT_PHONE",
+                    "visible": true
+                },
+                {
+                    "id": "date-updated",
+                    "name": "DATE_UPDATED",
+                    "title": "DATE_UPDATED",
+                    "visible": true
+                },
+                {
+                    "id": "description",
+                    "name": "DESCRIPTION",
+                    "title": "DESCRIPTION",
+                    "visible": true
+                },
+                {
+                    "id": "keywords",
+                    "name": "KEYWORDS",
+                    "title": "KEYWORDS",
+                    "visible": true
+                },
+                {
+                    "id": "latitude",
+                    "name": "LATITUDE",
+                    "title": "LATITUDE",
+                    "visible": true
+                },
+                {
+                    "id": "locality",
+                    "name": "LOCALITY",
+                    "title": "LOCALITY",
+                    "visible": true
+                },
+                {
+                    "id": "longitude",
+                    "name": "LONGITUDE",
+                    "title": "LONGITUDE",
+                    "visible": true
+                },
+                {
+                    "id": "objectid",
+                    "name": "OBJECTID",
+                    "title": "OBJECTID",
+                    "visible": true
+                },
+                {
+                    "id": "organization-name",
+                    "name": "ORGANIZATION_NAME",
+                    "title": "ORGANIZATION_NAME",
+                    "visible": true
+                },
+                {
+                    "id": "postal-code",
+                    "name": "POSTAL_CODE",
+                    "title": "POSTAL_CODE",
+                    "visible": true
+                },
+                {
+                    "id": "province",
+                    "name": "PROVINCE",
+                    "title": "PROVINCE",
+                    "visible": true
+                },
+                {
+                    "id": "service-name",
+                    "name": "SERVICE_NAME",
+                    "title": "SERVICE_NAME",
+                    "visible": true
+                },
+                {
+                    "id": "service-ref",
+                    "name": "SERVICE_REF",
+                    "title": "SERVICE_REF",
+                    "visible": true
+                },
+                {
+                    "id": "street-address",
+                    "name": "STREET_ADDRESS",
+                    "title": "STREET_ADDRESS",
+                    "visible": true
+                },
+                {
+                    "id": "website-healthlinkbc-url",
+                    "name": "WEBSITE_HEALTHLINKBC_URL",
+                    "title": "WEBSITE_HEALTHLINKBC_URL",
+                    "visible": true
+                },
+                {
+                    "id": "website-url",
+                    "name": "WEBSITE_URL",
+                    "title": "WEBSITE_URL",
+                    "visible": true
+                },
+                {
+                    "id": "wheelchair-accessible-ind",
+                    "name": "WHEELCHAIR_ACCESSIBLE_IND",
+                    "title": "WHEELCHAIR_ACCESSIBLE_IND",
+                    "visible": true
+                }
+            ]
+        }
+    ]
+}
