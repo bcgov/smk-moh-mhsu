@@ -2,73 +2,103 @@
     "layers": [
         {
             "title": "Mental  Health and Substance Use Support",
-            "dataUrl": "https://openmaps.gov.bc.ca/geo/pub/WHSE_IMAGERY_AND_BASE_MAPS.GSR_MENTAL_HLTH_SUBSTCE_USE_SV/ows?service=WMS&version=1.1.0&request=GetMap&layers=pub%3AWHSE_IMAGERY_AND_BASE_MAPS.GSR_MENTAL_HLTH_SUBSTCE_USE_SV&styles=7785&format=application/json;type=geojson&transparent=true&cql_filter=include&srs=EPSG:4326&width=768&height=660&bbox=-139.1782824917356,47.60393449638617,-110.35337939457779,60.593907018763396",
+            "dataUrl": "https://catalogue.data.gov.bc.ca/dataset/2e469ff2-dadb-45ea-af9d-f5683a4b9465/resource/6baaf199-0106-4dd6-8e2f-e24d629a81c6/download/mental_health.geojson",
             "id": "mental-health-and-substance-use-support",
             "attributes": [
                 {
-                    "id": "contact-email",
-                    "name": "CONTACT_EMAIL",
-                    "title": "CONTACT_EMAIL",
+                    "id": "mhsu-guid",
+                    "name": "MHSU_GUID",
+                    "title": "MHSU_GUID",
                     "visible": true
                 },
                 {
-                    "id": "contact-phone",
-                    "name": "CONTACT_PHONE",
-                    "title": "CONTACT_PHONE",
+                    "id": "gpce-taxonomy-classification",
+                    "name": "GPCE_TAXONOMY_CLASSIFICATION",
+                    "title": "GPCE_TAXONOMY_CLASSIFICATION",
                     "visible": true
                 },
                 {
-                    "id": "date-updated",
-                    "name": "DATE_UPDATED",
-                    "title": "DATE_UPDATED",
+                    "id": "audience",
+                    "name": "AUDIENCE",
+                    "title": "AUDIENCE",
                     "visible": true
                 },
                 {
-                    "id": "description",
-                    "name": "DESCRIPTION",
-                    "title": "DESCRIPTION",
+                    "id": "students",
+                    "name": "STUDENTS",
+                    "title": "STUDENTS",
                     "visible": true
                 },
                 {
-                    "id": "keywords",
-                    "name": "KEYWORDS",
-                    "title": "KEYWORDS",
+                    "id": "taxonomy-name",
+                    "name": "TAXONOMY_NAME",
+                    "title": "TAXONOMY_NAME",
                     "visible": true
                 },
                 {
-                    "id": "latitude",
-                    "name": "LATITUDE",
-                    "title": "LATITUDE",
+                    "id": "rg-name",
+                    "name": "RG_NAME",
+                    "title": "RG_NAME",
                     "visible": true
                 },
                 {
-                    "id": "locality",
-                    "name": "LOCALITY",
-                    "title": "LOCALITY",
+                    "id": "sv-name",
+                    "name": "SV_NAME",
+                    "title": "SV_NAME",
                     "visible": true
                 },
                 {
-                    "id": "longitude",
-                    "name": "LONGITUDE",
-                    "title": "LONGITUDE",
+                    "id": "sv-description",
+                    "name": "SV_DESCRIPTION",
+                    "title": "SV_DESCRIPTION",
                     "visible": true
                 },
                 {
-                    "id": "objectid",
-                    "name": "OBJECTID",
-                    "title": "OBJECTID",
+                    "id": "phone-number",
+                    "name": "PHONE_NUMBER",
+                    "title": "PHONE_NUMBER",
                     "visible": true
                 },
                 {
-                    "id": "organization-name",
-                    "name": "ORGANIZATION_NAME",
-                    "title": "ORGANIZATION_NAME",
+                    "id": "website",
+                    "name": "WEBSITE",
+                    "title": "WEBSITE",
                     "visible": true
                 },
                 {
-                    "id": "postal-code",
-                    "name": "POSTAL_CODE",
-                    "title": "POSTAL_CODE",
+                    "id": "email-address",
+                    "name": "EMAIL_ADDRESS",
+                    "title": "EMAIL_ADDRESS",
+                    "visible": true
+                },
+                {
+                    "id": "wheelchair-accessible",
+                    "name": "WHEELCHAIR_ACCESSIBLE",
+                    "title": "WHEELCHAIR_ACCESSIBLE",
+                    "visible": true
+                },
+                {
+                    "id": "language",
+                    "name": "LANGUAGE",
+                    "title": "LANGUAGE",
+                    "visible": true
+                },
+                {
+                    "id": "hours",
+                    "name": "HOURS",
+                    "title": "HOURS",
+                    "visible": true
+                },
+                {
+                    "id": "street-number",
+                    "name": "STREET_NUMBER",
+                    "title": "STREET_NUMBER",
+                    "visible": true
+                },
+                {
+                    "id": "city",
+                    "name": "CITY",
+                    "title": "CITY",
                     "visible": true
                 },
                 {
@@ -78,39 +108,33 @@
                     "visible": true
                 },
                 {
-                    "id": "service-name",
-                    "name": "SERVICE_NAME",
-                    "title": "SERVICE_NAME",
+                    "id": "postal-code",
+                    "name": "POSTAL_CODE",
+                    "title": "POSTAL_CODE",
                     "visible": true
                 },
                 {
-                    "id": "service-ref",
-                    "name": "SERVICE_REF",
-                    "title": "SERVICE_REF",
+                    "id": "latitude",
+                    "name": "LATITUDE",
+                    "title": "LATITUDE",
                     "visible": true
                 },
                 {
-                    "id": "street-address",
-                    "name": "STREET_ADDRESS",
-                    "title": "STREET_ADDRESS",
+                    "id": "longitude",
+                    "name": "LONGITUDE",
+                    "title": "LONGITUDE",
                     "visible": true
                 },
                 {
-                    "id": "website-healthlinkbc-url",
-                    "name": "WEBSITE_HEALTHLINKBC_URL",
-                    "title": "WEBSITE_HEALTHLINKBC_URL",
+                    "id": "mhsu-specific-terms-enhanced-search",
+                    "name": "MHSU_SPECIFIC_TERMS_ENHANCED_SEARCH",
+                    "title": "MHSU_SPECIFIC_TERMS_ENHANCED_SEARCH",
                     "visible": true
                 },
                 {
-                    "id": "website-url",
-                    "name": "WEBSITE_URL",
-                    "title": "WEBSITE_URL",
-                    "visible": true
-                },
-                {
-                    "id": "wheelchair-accessible-ind",
-                    "name": "WHEELCHAIR_ACCESSIBLE_IND",
-                    "title": "WHEELCHAIR_ACCESSIBLE_IND",
+                    "id": "keyword-search-text",
+                    "name": "KEYWORD_SEARCH_TEXT",
+                    "title": "KEYWORD_SEARCH_TEXT",
                     "visible": true
                 }
             ]
