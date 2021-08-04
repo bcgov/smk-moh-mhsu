@@ -1,0 +1,23 @@
+/* sidepanel.css */
+
+
+.smk-sidepanel .smk-panel .smk-header {
+    background-color: white;
+    border-radius: 3px;
+    z-index: 1;
+    font-size: 15px;
+}
+
+.smk-sidepanel .smk-panel .smk-body {
+    background-color: white;
+    border-radius: 3px;
+    font-size: 13px;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding: 5px;
+    z-index: 2;
+}
+
+.smk-elastic-panel .smk-panel > .smk-header {
+    font-weight: bold;
+}

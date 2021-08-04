@@ -3,20 +3,20 @@
     "viewer": {
         "type": "leaflet",
         "location": {
-            "extent": [
-                -140.80078125000003,
-                61.62728646147466,
-                -108.72070312500001,
-                46.13417004624326
-            ],
             "center": [
-                -124.76074218750003,
-                51.88072825385896
+                -124.74975585937501,
+                51.883272964437474
+            ],
+            "extent": [
+                -133.48388671875003,
+                46.9052455464292,
+                -116.01562500000001,
+                56.36525013685609
             ],
             "zoom": 6
         },
         "baseMap": "Streets",
-        "device": "mobile"
+        "device": "auto"
     },
     "layers": [
         {
@@ -139,7 +139,64 @@
                     "visible": true
                 }
             ],
-            "queries": null,
+            "queries": [
+                {
+                    "id": "mental-health-and-substance-use-support-query-0",
+                    "title": "Provider Search",
+                    "description": "Search for a service provider",
+                    "parameters": [
+                        {
+                            "id": "parameter-0",
+                            "title": "Search for:",
+                            "type": "input"
+                        }
+                    ],
+                    "predicate": {
+                        "operator": "or",
+                        "arguments": [
+                            {
+                                "operator": "contains",
+                                "arguments": [
+                                    {
+                                        "operand": "attribute",
+                                        "name": "ORGANIZATION_NAME"
+                                    },
+                                    {
+                                        "operand": "parameter",
+                                        "id": "parameter-0"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "contains",
+                                "arguments": [
+                                    {
+                                        "operand": "attribute",
+                                        "name": "SERVICE_NAME"
+                                    },
+                                    {
+                                        "operand": "parameter",
+                                        "id": "parameter-0"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "contains",
+                                "arguments": [
+                                    {
+                                        "operand": "attribute",
+                                        "name": "KEYWORDS"
+                                    },
+                                    {
+                                        "operand": "parameter",
+                                        "id": "parameter-0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
             "useClustering": true,
             "dataUrl": "https://openmaps.gov.bc.ca/geo/pub/WHSE_IMAGERY_AND_BASE_MAPS.GSR_MENTAL_HLTH_SUBSTCE_USE_SV/ows?service=WMS&version=1.1.0&request=GetMap&layers=pub%3AWHSE_IMAGERY_AND_BASE_MAPS.GSR_MENTAL_HLTH_SUBSTCE_USE_SV&styles=7785&format=application/json;type=geojson&transparent=true&cql_filter=include&srs=EPSG:4326&width=768&height=660&bbox=-139.1782824917356,47.60393449638617,-110.35337939457779,60.593907018763396",
             "legend": {
@@ -171,7 +228,7 @@
             "useHeatmap": false,
             "useRaw": false,
             "metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/2e469ff2-dadb-45ea-af9d-f5683a4b9465",
-            "popupTemplate": "<div><h4><font color=\"#0000ff\">{{ feature.title }}</font></h4></div>\n<div><table border=\"\\&quot;0\\&quot;\" width=\"\\&quot;100%\\&quot;\">\n<tbody>\n<tr><td>{{ feature.properties['Organization'] }}</td></tr>\n<tr><td>{{ feature.properties['STREET_ADDRESS'] }} {{ feature.properties['LOCALITY'] }}  {{ feature.properties['POSTAL_CODE'] }}</td></tr>\n<tr><td>{{ feature.properties['CONTACT_PHONE'] }}</td></tr>\n<tr><td>{{ feature.properties['CONTACT_EMAIL'] }}</td></tr>\n</tbody>\n</table></div>\n<br>\n<div v-if=\"\\&quot;feature.properties['WEBSITE_HEALTHLINKBC_URL']\" !=\"=\" null\\\"=\"\"><a target=\"\\&quot;_blank\\&quot;\" v-bind:href=\"\\&quot;feature.properties['WEBSITE_HEALTHLINKBC_URL']\\&quot;\">More Information</a></div>"
+            "popupTemplate": "<div>\n    <h3><b>\n            {{ feature.title }}\n        </b></h3>\n    <div><b><br></b>\n    </div>\n    <b>Service area:&nbsp;</b>{{ feature.properties[\"SERVICE_NAME\"] }}\n    <br>\n    <br>\n    <div><b>Topics: </b>{{ feature.properties[\"DESCRIPTION\"] }}</div>\n    <div>\n        <br>\n    </div>\n    <div><b>Wheelchair accessible: </b>{{ feature.properties[\"WHEELCHAIR_ACCESSIBLE_IND\"] }}</div>\n    <div v-if=\"feature.properties['CONTACT_PHONE'] !== null\"><b>Phone:&nbsp;</b>{{ feature.properties[\"CONTACT_PHONE\"] }}</div>\n    <div v-for=\"item in [feature.properties['CONTACT_EMAIL']]\">\n      <div v-if=\"item !== null && item !== undefined\">\n        <b>Email:&nbsp;</b><a v-bind:href=\"'mailto:' + item\">{{item}}</a>\n      </div>\n    </div>\n    <div v-for=\"item in [feature.properties['WEBSITE_URL']]\">\n      <div v-if=\"item !== null && item !== undefined\">\n        <b>Website:&nbsp;</b><a v-bind:href=item target=\"_blank\">{{item}}</a>\n      </div\n    </div>\n</div>"
         }
     ],
     "tools": [
@@ -180,6 +237,9 @@
             "enabled": true
         },
         {
+            "order": 1,
+            "icon": "menu",
+            "position": "toolbar",
             "type": "list-menu",
             "enabled": true,
             "title": "Mental Health and Substance Use Services in BC"
@@ -193,16 +253,21 @@
             "enabled": true
         },
         {
+            "mouseWheel": true,
+            "doubleClick": true,
+            "box": true,
+            "control": true,
             "type": "zoom",
-            "enabled": true,
-            "control": false
+            "enabled": true
         },
         {
-            "type": "about",
-            "enabled": true,
-            "title": "About Mental Health and Substance Use Services in BC",
+            "order": "2",
             "position": "list-menu",
-            "content": "<p>Welcome to SMK!</p><p>This is a map of the Mental Health and Substance Use Services avaialble in BC.</p>"
+            "icon": "help",
+            "title": "About Mental Health and Substance Use Services in BC",
+            "content": "<p>The Mental Health and Substance Use Service Map provides listings for all mental health and substance use services provided by the provincial government, provincial health authorities, and non-profit agencies across British Columbia.</p>",
+            "type": "about",
+            "enabled": true
         },
         {
             "order": 3,
@@ -222,19 +287,29 @@
             "enabled": false
         },
         {
+            "order": 3,
+            "position": "list-menu",
+            "icon": "map",
+            "title": "Base Maps",
+            "mapStyle": {
+                "width": "110px",
+                "height": "110px"
+            },
             "type": "baseMaps",
             "enabled": false,
-            "position": "list-menu"
+            "choices": [
+                "Streets"
+            ]
         },
         {
-            "order": 5,
-            "position": "toolbar",
+            "order": "3",
+            "position": "list-menu",
             "icon": "info_outline",
             "title": "Identify",
             "command": {
                 "select": false,
-                "radius": false,
-                "radiusUnit": null,
+                "radius": true,
+                "radiusUnit": false,
                 "nearBy": true
             },
             "radius": "2",
@@ -242,7 +317,7 @@
             "type": "identify",
             "enabled": true,
             "showPanel": true,
-            "showWidget": false,
+            "showWidget": true,
             "style": {
                 "strokeWidth": 1,
                 "strokeStyle": "1, 1",
@@ -261,6 +336,17 @@
             }
         },
         {
+            "order": "1",
+            "position": "toolbar",
+            "icon": "search",
+            "title": "Search for Location",
+            "showPanel": true,
+            "showLocation": false,
+            "command": {
+                "identify": true,
+                "measure": true,
+                "directions": true
+            },
             "type": "search",
             "enabled": true
         },
@@ -293,12 +379,25 @@
         {
             "showHeader": false,
             "type": "location",
-            "enabled": true
+            "enabled": false
         },
         {
             "type": "select",
             "enabled": false,
             "position": "list-menu"
+        },
+        {
+            "order": 5,
+            "within": false,
+            "command": {
+                "within": true,
+                "select": false
+            },
+            "type": "query",
+            "instance": "mental-health-and-substance-use-support--mental-health-and-substance-use-support-query-0",
+            "enabled": true,
+            "position": "list-menu",
+            "title": "Provider Search"
         }
     ],
     "version": "1.0.2",
