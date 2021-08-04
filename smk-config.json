@@ -3,79 +3,139 @@
     "viewer": {
         "type": "leaflet",
         "location": {
-            "extent": [
-                -140.80078125000003,
-                61.62728646147466,
-                -108.72070312500001,
-                46.13417004624326
-            ],
             "center": [
-                -124.76074218750003,
-                51.88072825385896
+                -120.74487947108582,
+                53.32494138802715
             ],
-            "zoom": 6
+            "extent": [
+                -128.77551317390598,
+                48.566835890370925,
+                -112.71424576826563,
+                57.605905541814636
+            ],
+            "zoom": 5.668733613443237
         },
         "baseMap": "Streets",
-        "device": "mobile"
+        "device": "auto"
     },
     "layers": [
         {
             "type": "vector",
             "id": "mental-health-and-substance-use-support",
-            "title": "Mental  Health and Substance Use Support",
+            "title": "Mental Health and Substance Use Services",
             "isVisible": true,
             "isQueryable": true,
             "opacity": "0.85",
             "minScale": null,
             "maxScale": null,
-            "titleAttribute": "ORGANIZATION_NAME",
+            "titleAttribute": "RG_NAME",
             "attributes": [
                 {
-                    "id": "organization-name",
-                    "name": "ORGANIZATION_NAME",
-                    "title": "Name",
+                    "id": "mhsu-guid",
+                    "name": "MHSU_GUID",
+                    "title": "MHSU_GUID",
+                    "visible": false
+                },
+                {
+                    "id": "gpce-taxonomy-classification",
+                    "name": "GPCE_TAXONOMY_CLASSIFICATION",
+                    "title": "GPCE_TAXONOMY_CLASSIFICATION",
                     "visible": true
                 },
                 {
-                    "id": "service-name",
-                    "name": "SERVICE_NAME",
-                    "title": "Service",
+                    "id": "audience",
+                    "name": "AUDIENCE",
+                    "title": "AUDIENCE",
                     "visible": true
                 },
                 {
-                    "id": "keywords",
-                    "name": "KEYWORDS",
-                    "title": "Topics",
+                    "id": "students",
+                    "name": "STUDENTS",
+                    "title": "STUDENTS",
                     "visible": true
                 },
                 {
-                    "id": "description",
-                    "name": "DESCRIPTION",
-                    "title": "Description",
+                    "id": "taxonomy-name",
+                    "name": "TAXONOMY_NAME",
+                    "title": "TAXONOMY_NAME",
                     "visible": true
                 },
                 {
-                    "id": "street-address",
-                    "name": "STREET_ADDRESS",
-                    "title": "Address",
+                    "id": "rg-name",
+                    "name": "RG_NAME",
+                    "title": "RG_NAME",
                     "visible": true
                 },
                 {
-                    "id": "locality",
-                    "name": "LOCALITY",
-                    "title": "Locality",
+                    "id": "sv-name",
+                    "name": "SV_NAME",
+                    "title": "SV_NAME",
+                    "visible": true
+                },
+                {
+                    "id": "sv-description",
+                    "name": "SV_DESCRIPTION",
+                    "title": "SV_DESCRIPTION",
+                    "visible": true
+                },
+                {
+                    "id": "phone-number",
+                    "name": "PHONE_NUMBER",
+                    "title": "PHONE_NUMBER",
+                    "visible": true
+                },
+                {
+                    "id": "website",
+                    "name": "WEBSITE",
+                    "title": "WEBSITE",
+                    "visible": true
+                },
+                {
+                    "id": "email-address",
+                    "name": "EMAIL_ADDRESS",
+                    "title": "EMAIL_ADDRESS",
+                    "visible": true
+                },
+                {
+                    "id": "wheelchair-accessible",
+                    "name": "WHEELCHAIR_ACCESSIBLE",
+                    "title": "WHEELCHAIR_ACCESSIBLE",
+                    "visible": true
+                },
+                {
+                    "id": "language",
+                    "name": "LANGUAGE",
+                    "title": "LANGUAGE",
+                    "visible": true
+                },
+                {
+                    "id": "hours",
+                    "name": "HOURS",
+                    "title": "HOURS",
+                    "visible": true
+                },
+                {
+                    "id": "street-number",
+                    "name": "STREET_NUMBER",
+                    "title": "STREET_NUMBER",
+                    "visible": true
+                },
+                {
+                    "id": "city",
+                    "name": "CITY",
+                    "title": "CITY",
                     "visible": true
                 },
                 {
                     "id": "province",
                     "name": "PROVINCE",
-                    "title": "Province",
+                    "title": "PROVINCE",
                     "visible": true
                 },
                 {
                     "id": "postal-code",
                     "name": "POSTAL_CODE",
-                    "title": "Postal Code",
+                    "title": "POSTAL_CODE",
                     "visible": true
                 },
                 {
@@ -85,63 +145,27 @@
                     "visible": false
                 },
                 {
-                    "id": "wheelchair-accessible-ind",
-                    "name": "WHEELCHAIR_ACCESSIBLE_IND",
-                    "title": "Wheelchair Accessible",
-                    "visible": true
-                },
-                {
-                    "id": "contact-phone",
-                    "name": "CONTACT_PHONE",
-                    "title": "Phone",
-                    "visible": true
-                },
-                {
-                    "id": "contact-email",
-                    "name": "CONTACT_EMAIL",
-                    "title": "Email",
-                    "visible": true
-                },
-                {
-                    "id": "website-url",
-                    "name": "WEBSITE_URL",
-                    "title": "Website",
-                    "visible": true
-                },
-                {
-                    "id": "service-ref",
-                    "name": "SERVICE_REF",
-                    "title": "SERVICE_REF",
-                    "visible": false
-                },
-                {
-                    "id": "date-updated",
-                    "name": "DATE_UPDATED",
-                    "title": "DATE_UPDATED",
-                    "visible": false
-                },
-                {
                     "id": "longitude",
                     "name": "LONGITUDE",
                     "title": "LONGITUDE",
                     "visible": false
                 },
                 {
-                    "id": "objectid",
-                    "name": "OBJECTID",
-                    "title": "OBJECTID",
-                    "visible": false
+                    "id": "mhsu-specific-terms-enhanced-search",
+                    "name": "MHSU_SPECIFIC_TERMS_ENHANCED_SEARCH",
+                    "title": "MHSU_SPECIFIC_TERMS_ENHANCED_SEARCH",
+                    "visible": true
                 },
                 {
-                    "id": "website-healthlinkbc-url",
-                    "name": "WEBSITE_HEALTHLINKBC_URL",
-                    "title": "WEBSITE_HEALTHLINKBC_URL",
+                    "id": "keyword-search-text",
+                    "name": "KEYWORD_SEARCH_TEXT",
+                    "title": "KEYWORD_SEARCH_TEXT",
                     "visible": true
                 }
             ],
             "queries": null,
             "useClustering": true,
-            "dataUrl": "https://openmaps.gov.bc.ca/geo/pub/WHSE_IMAGERY_AND_BASE_MAPS.GSR_MENTAL_HLTH_SUBSTCE_USE_SV/ows?service=WMS&version=1.1.0&request=GetMap&layers=pub%3AWHSE_IMAGERY_AND_BASE_MAPS.GSR_MENTAL_HLTH_SUBSTCE_USE_SV&styles=7785&format=application/json;type=geojson&transparent=true&cql_filter=include&srs=EPSG:4326&width=768&height=660&bbox=-139.1782824917356,47.60393449638617,-110.35337939457779,60.593907018763396",
+            "dataUrl": "https://catalogue.data.gov.bc.ca/dataset/2e469ff2-dadb-45ea-af9d-f5683a4b9465/resource/6baaf199-0106-4dd6-8e2f-e24d629a81c6/download/mental_health.geojson",
             "legend": {
                 "line": false,
                 "point": true
@@ -171,7 +195,8 @@
             "useHeatmap": false,
             "useRaw": false,
             "metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/2e469ff2-dadb-45ea-af9d-f5683a4b9465",
-            "popupTemplate": "<div><h4><font color=\"#0000ff\">{{ feature.title }}</font></h4></div>\n<div><table border=\"\\&quot;0\\&quot;\" width=\"\\&quot;100%\\&quot;\">\n<tbody>\n<tr><td>{{ feature.properties['Organization'] }}</td></tr>\n<tr><td>{{ feature.properties['STREET_ADDRESS'] }} {{ feature.properties['LOCALITY'] }}  {{ feature.properties['POSTAL_CODE'] }}</td></tr>\n<tr><td>{{ feature.properties['CONTACT_PHONE'] }}</td></tr>\n<tr><td>{{ feature.properties['CONTACT_EMAIL'] }}</td></tr>\n</tbody>\n</table></div>\n<br>\n<div v-if=\"\\&quot;feature.properties['WEBSITE_HEALTHLINKBC_URL']\" !=\"=\" null\\\"=\"\"><a target=\"\\&quot;_blank\\&quot;\" v-bind:href=\"\\&quot;feature.properties['WEBSITE_HEALTHLINKBC_URL']\\&quot;\">More Information</a></div>"
+            "popupTemplate": "<div>\n<style>\ntable {\n         font-family: Helvetica,Arial,sans-serif;\n\t font-size: 6;\n        }\n               \n</style>\n<div>\n<table border=\"0\" width=\"80%\">\n<tbody>\n<tr><td colspan=\"2\"><b>{{feature.title}}</b></td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['SV_NAME'] !== null\"><td><b>Service Area:</b></td><td>{{feature.properties['SV_NAME']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['TAXONOMY_NAME'] !== null\"><td><b>Topics:</b></td><td>{{feature.properties['TAXONOMY_NAME']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['SV_DESCRIPTION'] !== null\"><td colspan=\"2\">{{feature.properties['SV_DESCRIPTION']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr><td><b>Address:</b></td><td>{{feature.properties['STREET_NUMBER']}}<br>{{feature.properties['CITY']}}, BC<br>{{feature.properties['POSTAL_CODE']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['HOURS'] !== null\"><td><b>Hours:</b></td><td>{{feature.properties['HOURS']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['WHEELCHAIR_ACCESSIBLE'] !== null\"><td><b>Wheelchair Access:</b></td><td>{{feature.properties['WHEELCHAIR_ACCESSIBLE']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['PHONE_NUMBER'] !== null\"><td><b>Phone:</b></td><td>{{feature.properties['PHONE_NUMBER']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['EMAIL_ADDRESS'] !== null\"><td><b>Email:</b></td><td>{{feature.properties['EMAIL_ADDRESS']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['WEBSITE'] !== null\"><td colspan=\"2\"><a target=\"_blank\" v-bind:href=\"feature.properties['WEBSITE']\">Visit Service Website</a></td></tr>\n</tbody>\n</table>\n</div>\n</div>",
+            "scaleMax": 691
         }
     ],
     "tools": [
@@ -230,7 +255,7 @@
             "order": 5,
             "position": "toolbar",
             "icon": "info_outline",
-            "title": "Identify",
+            "title": "Find Services",
             "command": {
                 "select": false,
                 "radius": false,
@@ -293,7 +318,7 @@
         {
             "showHeader": false,
             "type": "location",
-            "enabled": true
+            "enabled": false
         },
         {
             "type": "select",
