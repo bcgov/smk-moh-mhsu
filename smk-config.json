@@ -163,7 +163,38 @@
                     "visible": true
                 }
             ],
-            "queries": null,
+            "queries": [
+                {
+                    "id": "mental-health-and-substance-use-support-query-0",
+                    "title": "Search for Services",
+                    "description": "Find a service provider near you.",
+                    "parameters": [
+                        {
+                            "id": "parameter-0",
+                            "title": "Search for:",
+                            "type": "input"
+                        }
+                    ],
+                    "predicate": {
+                        "operator": "and",
+                        "arguments": [
+                            {
+                                "operator": "contains",
+                                "arguments": [
+                                    {
+                                        "operand": "attribute",
+                                        "name": "KEYWORD_SEARCH_TEXT"
+                                    },
+                                    {
+                                        "operand": "parameter",
+                                        "id": "parameter-0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
             "useClustering": true,
             "dataUrl": "https://catalogue.data.gov.bc.ca/dataset/2e469ff2-dadb-45ea-af9d-f5683a4b9465/resource/6baaf199-0106-4dd6-8e2f-e24d629a81c6/download/mental_health.geojson",
             "legend": {
@@ -195,7 +226,7 @@
             "useHeatmap": false,
             "useRaw": false,
             "metadataUrl": "https://catalogue.data.gov.bc.ca/dataset/2e469ff2-dadb-45ea-af9d-f5683a4b9465",
-            "popupTemplate": "<div>\n<style>\ntable {\n         font-family: Helvetica,Arial,sans-serif;\n\t font-size: 6;\n        }\n               \n</style>\n<div>\n<table border=\"0\" width=\"80%\">\n<tbody>\n<tr><td colspan=\"2\"><b>{{feature.title}}</b></td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['SV_NAME'] !== null\"><td><b>Service Area:</b></td><td>{{feature.properties['SV_NAME']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['TAXONOMY_NAME'] !== null\"><td><b>Topics:</b></td><td>{{feature.properties['TAXONOMY_NAME']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['SV_DESCRIPTION'] !== null\"><td colspan=\"2\">{{feature.properties['SV_DESCRIPTION']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr><td><b>Address:</b></td><td>{{feature.properties['STREET_NUMBER']}}<br>{{feature.properties['CITY']}}, BC<br>{{feature.properties['POSTAL_CODE']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['HOURS'] !== null\"><td><b>Hours:</b></td><td>{{feature.properties['HOURS']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['WHEELCHAIR_ACCESSIBLE'] !== null\"><td><b>Wheelchair Access:</b></td><td>{{feature.properties['WHEELCHAIR_ACCESSIBLE']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['PHONE_NUMBER'] !== null\"><td><b>Phone:</b></td><td>{{feature.properties['PHONE_NUMBER']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['EMAIL_ADDRESS'] !== null\"><td><b>Email:</b></td><td>{{feature.properties['EMAIL_ADDRESS']}}</td></tr>\n<tr><td colspan=\"2\">&nbsp;</td></tr>\n<tr v-if=\"feature.properties['WEBSITE'] !== null\"><td colspan=\"2\"><a target=\"_blank\" v-bind:href=\"feature.properties['WEBSITE']\">Visit Service Website</a></td></tr>\n</tbody>\n</table>\n</div>\n</div>",
+            "popupTemplate": "<div>\n    <div>\n        <table border=\"0\" table-layout=\"fixed\">\n            <tbody>\n                <tr>\n                    <td colspan=\"2\"><b>{{feature.title}}</b></td>\n                </tr>\n                <tr>\n                    <td colspan=\"2\">&nbsp;</td>\n                </tr>\n                <template v-if=\"feature.properties['SV_NAME'] !== null && feature.properties['SV_NAME'] !== undefined && feature.properties['SV_NAME'] !== ''\">\n                    <tr>\n                        <td><b>Service Area:</b></td>\n                        <td>{{feature.properties['SV_NAME']}}</td>\n                    </tr>\n                    <tr>\n                        <td colspan=\"2\">&nbsp;</td>\n                    </tr>\n                </template>\n                <template v-if=\"feature.properties['TAXONOMY_NAME'] !== null && feature.properties['TAXONOMY_NAME'] !== undefined && feature.properties['TAXONOMY_NAME'] !== ''\">\n                    <tr v-if=\"feature.properties['TAXONOMY_NAME'] !== null\">\n                        <td><b>Topics:</b></td>\n                        <td>{{feature.properties['TAXONOMY_NAME']}}</td>\n                    </tr>\n                    <tr>\n                        <td colspan=\"2\">&nbsp;</td>\n                    </tr>\n                </template>\n                <template v-if=\"feature.properties['SV_DESCRIPTION'] !== null && feature.properties['SV_DESCRIPTION'] !== undefined && feature.properties['SV_DESCRIPTION'] !== ''\">\n                    <tr v-if=\"feature.properties['SV_DESCRIPTION'] !== null\">\n                        <td colspan=\"2\">{{feature.properties['SV_DESCRIPTION']}}</td>\n                    </tr>\n                </template>\n                <template v-if=\"feature.properties['STREET_NUMBER'] !== null && feature.properties['STREET_NUMBER'] !== undefined && feature.properties['STREET_NUMBER'] !== ''\">\n                <tr>\n                    <td><b>Address:</b></td>\n                    <td>{{feature.properties['STREET_NUMBER']}}<br>{{feature.properties['CITY']}}, BC<br>{{feature.properties['POSTAL_CODE']}}</td>\n                </tr>\n</template>\n                <tr>\n                    <td colspan=\"2\">&nbsp;</td>\n                </tr>\n                <template v-if=\"feature.properties['HOURS'] !== null\" && v-if=\"feature.properties['HOURS'] !== undefined\" && v-if=\"feature.properties['HOURS'] !== ''\">\n                    <tr>\n                        <td><b>Hours:</b></td>\n                        <td>{{feature.properties['HOURS']}}</td>\n                    </tr>\n                    <tr>\n                        <td colspan=\"2\">&nbsp;</td>\n                    </tr>\n                </template>\n                <tr v-if=\"feature.properties['WHEELCHAIR_ACCESSIBLE'] !== null\">\n                    <td><b>Wheelchair Access:</b></td>\n                    <td>{{feature.properties['WHEELCHAIR_ACCESSIBLE']}}</td>\n                </tr>\n                <tr>\n                    <td colspan=\"2\">&nbsp;</td>\n                </tr>\n                <tr v-if=\"feature.properties['PHONE_NUMBER'] !== null\">\n                    <td><b>Phone:</b></td>\n                    <td>{{feature.properties['PHONE_NUMBER']}}</td>\n                </tr>\n                <tr>\n                    <td colspan=\"2\">&nbsp;</td>\n                </tr>\n                <template v-if=\"feature.properties['EMAIL_ADDRESS'] !== null\" && v-if=\"feature.properties['EMAIL_ADDRESS'] !== undefined\" && v-if=\"feature.properties['EMAIL_ADDRESS'] !== ''\">\n                    <tr v-if=\"feature.properties['EMAIL_ADDRESS'] !== null\">\n                        <td><b>Email:</b></td>\n                        <td>{{feature.properties['EMAIL_ADDRESS']}}</td>\n                    </tr>\n                    <tr>\n                        <td colspan=\"2\">&nbsp;</td>\n                    </tr>\n                </template>\n                <template v-if=\"feature.properties['WEBSITE'] !== null && feature.properties['WEBSITE'] !== undefined && feature.properties['WEBSITE'] !==''\">\n                    <tr>\n                        <td colspan=\"2\"><a target=\"_blank\" v-bind:href=\"feature.properties['WEBSITE']\">Visit Service Website</a></td>\n                    </tr>\n                </template>\n            </tbody>\n        </table>\n    </div>\n</div>",
             "scaleMax": 691
         }
     ],
@@ -218,16 +249,21 @@
             "enabled": true
         },
         {
+            "mouseWheel": true,
+            "doubleClick": true,
+            "box": true,
+            "control": true,
             "type": "zoom",
-            "enabled": true,
-            "control": false
+            "enabled": true
         },
         {
-            "type": "about",
-            "enabled": true,
-            "title": "About Mental Health and Substance Use Services in BC",
+            "order": 1,
             "position": "list-menu",
-            "content": "<p>Welcome to SMK!</p><p>This is a map of the Mental Health and Substance Use Services avaialble in BC.</p>"
+            "icon": "help",
+            "title": "About Mental Health and Substance Use Services in BC",
+            "content": "<p>The Mental Health and Substance Use Service Map provides listings for all mental health and substance use services provided by the provincial government, provincial health authorities, and non-profit agencies across British Columbia.</p>",
+            "type": "about",
+            "enabled": true
         },
         {
             "order": 3,
@@ -252,13 +288,13 @@
             "position": "list-menu"
         },
         {
-            "order": 5,
-            "position": "toolbar",
+            "order": "2",
+            "position": "list-menu",
             "icon": "info_outline",
             "title": "Find Services",
             "command": {
                 "select": false,
-                "radius": false,
+                "radius": true,
                 "radiusUnit": null,
                 "nearBy": true
             },
@@ -267,7 +303,7 @@
             "type": "identify",
             "enabled": true,
             "showPanel": true,
-            "showWidget": false,
+            "showWidget": true,
             "style": {
                 "strokeWidth": 1,
                 "strokeStyle": "1, 1",
@@ -286,6 +322,17 @@
             }
         },
         {
+            "order": 2,
+            "position": "toolbar",
+            "icon": "search",
+            "title": "Search for Location",
+            "showPanel": true,
+            "showLocation": false,
+            "command": {
+                "identify": true,
+                "measure": true,
+                "directions": true
+            },
             "type": "search",
             "enabled": true
         },
@@ -323,6 +370,19 @@
         {
             "type": "select",
             "enabled": false,
+            "position": "list-menu"
+        },
+        {
+            "order": "3",
+            "within": false,
+            "command": {
+                "within": true,
+                "select": false
+            },
+            "type": "query",
+            "instance": "mental-health-and-substance-use-support--mental-health-and-substance-use-support-query-0",
+            "enabled": true,
+            "title": "Search for Providers",
             "position": "list-menu"
         }
     ],

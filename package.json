@@ -1,0 +1,21 @@
+{
+  "name": "smk-moh-mhsu",
+  "version": "1.0.0",
+  "description": "Mental Health and Substance Use Map",
+  "main": "smk-init.js",
+  "dependencies": {
+    "@bcgov/smk": "^1.0.4"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  },
+  "scripts": {
+    "view": "http-server -o -c-1"
+  },
+  "author": "Map Team",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bcgov/smk-moh-mhsu/issues"
+  },
+  "homepage": "https://github.com/bcgov/smk-moh-mhsu#readme"
+}
