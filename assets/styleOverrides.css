@@ -1,16 +1,9 @@
 /* sidepanel */
 
 .smk-sidepanel .smk-panel .smk-header {
-    background-color: white;
-    border-radius: 3px;
-    z-index: 1;
     font-size: 15px;
 }
 
 .smk-sidepanel .smk-panel .smk-body {
     font-size: 0.85em;
 }
-
-/* .smk-sidepanel .smk-panel .smk-body h3 {
-    font-size: 13px;
-} */
