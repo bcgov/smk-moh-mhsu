@@ -176,7 +176,7 @@
                         }
                     ],
                     "predicate": {
-                        "operator": "and",
+                        "operator": "or",
                         "arguments": [
                             {
                                 "operator": "contains",
@@ -184,6 +184,58 @@
                                     {
                                         "operand": "attribute",
                                         "name": "KEYWORD_SEARCH_TEXT"
+                                    },
+                                    {
+                                        "operand": "parameter",
+                                        "id": "parameter-0"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "contains",
+                                "arguments": [
+                                    {
+                                        "operand": "attribute",
+                                        "name": "TAXONOMY_NAME"
+                                    },
+                                    {
+                                        "operand": "parameter",
+                                        "id": "parameter-0"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "contains",
+                                "arguments": [
+                                    {
+                                        "operand": "attribute",
+                                        "name": "SV_NAME"
+                                    },
+                                    {
+                                        "operand": "parameter",
+                                        "id": "parameter-0"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "contains",
+                                "arguments": [
+                                    {
+                                        "operand": "attribute",
+                                        "name": "MHSU_SPECIFIC_TERMS_ENHANCED_SEARCH"
+                                    },
+                                    {
+                                        "operand": "parameter",
+                                        "id": "parameter-0"
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "contains",
+                                "arguments": [
+                                    {
+                                        "operand": "attribute",
+                                        "name": "RG_NAME"
                                     },
                                     {
                                         "operand": "parameter",
