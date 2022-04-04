@@ -351,8 +351,8 @@
                 "nearBy": true,
                 "attributeMode": false
             },
-            "radius": "2",
-            "radiusUnit": "km",
+            "radius": "20",
+            "radiusUnit": "px",
             "type": "identify",
             "enabled": true,
             "showPanel": true,
