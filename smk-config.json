@@ -346,13 +346,13 @@
             "title": "Find Services Near You",
             "command": {
                 "select": false,
-                "radius": true,
-                "radiusUnit": true,
+                "radius": false,
+                "radiusUnit": null,
                 "nearBy": true,
                 "attributeMode": false
             },
-            "radius": "20",
-            "radiusUnit": "px",
+            "radius": "2",
+            "radiusUnit": "km",
             "type": "identify",
             "enabled": true,
             "showPanel": true,
