@@ -348,10 +348,10 @@
                 "select": false,
                 "radius": false,
                 "radiusUnit": null,
-                "nearBy": true,
+                "nearBy": false,
                 "attributeMode": false
             },
-            "radius": "20",
+            "radius": "100",
             "radiusUnit": "px",
             "type": "identify",
             "enabled": true,
