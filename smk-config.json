@@ -4,14 +4,14 @@
         "type": "leaflet",
         "location": {
             "center": [
-                -124.76074218750003,
-                54.32494138802715
+                -125.5547914708973,
+                54.08649244578677
             ],
             "extent": [
-                -128.77551317390598,
-                48.566835890370925,
-                -112.71424576826563,
-                57.605905541814636
+                -136.54335221744125,
+                48.052786419079695,
+                -114.56623072435335,
+                59.354780157802274
             ],
             "zoom": 5.668733613443237
         },
@@ -28,7 +28,7 @@
             "opacity": "0.85",
             "minScale": null,
             "maxScale": null,
-            "titleAttribute": "RG_NAME",
+            "titleAttribute": "SV_NAME",
             "attributes": [
                 {
                     "id": "mhsu-guid",
@@ -270,8 +270,8 @@
                     40
                 ],
                 "markerOffset": [
-                    15,
-                    24
+                    12.5,
+                    40
                 ]
             },
             "legends": null,
@@ -343,15 +343,16 @@
             "order": "2",
             "position": "list-menu",
             "icon": "info_outline",
-            "title": "Find Services",
+            "title": "Find Services Near You",
             "command": {
                 "select": false,
-                "radius": true,
+                "radius": false,
                 "radiusUnit": null,
-                "nearBy": true
+                "nearBy": false,
+                "attributeMode": false
             },
-            "radius": "2",
-            "radiusUnit": "km",
+            "radius": "100",
+            "radiusUnit": "px",
             "type": "identify",
             "enabled": true,
             "showPanel": true,
