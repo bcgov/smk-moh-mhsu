@@ -348,7 +348,7 @@
                 "select": false,
                 "radius": false,
                 "radiusUnit": null,
-                "nearBy": false,
+                "nearBy": true,
                 "attributeMode": false
             },
             "radius": "100",
