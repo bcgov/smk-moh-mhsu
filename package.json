@@ -4,7 +4,7 @@
   "description": "Mental Health and Substance Use Map",
   "main": "smk-init.js",
   "dependencies": {
-    "@bcgov/smk": "^1.1.0"
+    "@bcgov/smk": "^1.1.1"
   },
   "devDependencies": {
     "http-server": "^0.12.3"
